@@ -1,0 +1,15 @@
+.home {
+  background: url(https://c0.wallpaperflare.com/preview/176/561/184/banking-business-coin-currency.jpg) no-repeat center;
+  height: 100vh;
+  background-size: cover;
+  .fd-section {
+    padding-top: 2rem;
+  }
+  h1 {
+    font-size: var(--sapFontHeader1Size);
+    text-align: center;
+  }
+  h3 {
+    text-align: center;
+  }
+}
