@@ -1,0 +1,8 @@
+.fd-panel__body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  p {
+    margin: 0;
+  }
+}

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "luigisample": {
+    "microfrontendangular": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -79,18 +79,18 @@
         "serve": {
           "builder": "@angular-builders/custom-webpack:dev-server",
           "options": {
-            "browserTarget": "luigisample:build"
+            "browserTarget": "microfrontendangular:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "luigisample:build:production"
+              "browserTarget": "microfrontendangular:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "luigisample:build"
+            "browserTarget": "microfrontendangular:build"
           }
         },
         "test": {

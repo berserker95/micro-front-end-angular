@@ -1,0 +1,76 @@
+{
+  "data": {
+    "payments": [
+      {
+        "id": 1,
+        "creationDate": "10/10/2022",
+        "recipient": "John Lennon",
+        "reason": "House rental payment",
+        "quantity": "300€"
+      },
+      {
+        "id": 2,
+        "creationDate": "15/06/2022",
+        "recipient": "Steve Jobs",
+        "reason": "Book purchase",
+        "quantity": "15.50€"
+      },
+      {
+        "id": 3,
+        "creationDate": "12/09/2022",
+        "recipient": "Mario Rossi",
+        "reason": "Birthday party quote",
+        "quantity": "25€"
+      },
+      {
+        "id": 4,
+        "creationDate": "15/02/2022",
+        "recipient": "Mario Biondi",
+        "reason": "Shopping",
+        "quantity": "120€"
+      },
+      {
+        "id": 5,
+        "creationDate": "15/02/2022",
+        "recipient": "Luigi Verdi",
+        "reason": "Fast food",
+        "quantity": "40€"
+      },
+      {
+        "id": 6,
+        "creationDate": "07/02/2022",
+        "recipient": "John Lennon",
+        "reason": "House rental payment",
+        "quantity": "300€"
+      },
+      {
+        "id": 7,
+        "creationDate": "11/02/2022",
+        "recipient": "Steve Jobs",
+        "reason": "Book purchase",
+        "quantity": "15.50€"
+      },
+      {
+        "id": 8,
+        "creationDate": "17/04/2022",
+        "recipient": "Jeremy Clarkson",
+        "reason": "Top Gear book purchase",
+        "quantity": "25€"
+      },
+      {
+        "id": 9,
+        "creationDate": "15/02/2022",
+        "recipient": "Mario Biondi",
+        "reason": "Shopping",
+        "quantity": "120€"
+      },
+      {
+        "id": 10,
+        "creationDate": "03/02/2022",
+        "recipient": "Luigi Gialli",
+        "reason": "Fast food",
+        "quantity": "28.50€"
+      }
+    ]
+  }
+}

@@ -5,7 +5,24 @@
     </div>
     <div class="fd-panel">
       <div class="fd-panel__body">
-       The list of your payments
+      <p>The list of your payments</p>
+      <table class="fd-table" *ngIf="payments.length > 0">
+        <thead class="fd-table__header">
+            <tr class="fd-table__row">
+                <th class="fd-table__cell" scope="col" *ngFor="let column of tableHeader">
+                  {{column}}
+                </th>
+            </tr>
+        </thead>
+        <tbody class="fd-table__body">
+            <tr class="fd-table__row" *ngFor="let payment of payments">
+                <td class="fd-table__cell">{{payment.creationDate}}</td>
+                <td class="fd-table__cell">{{payment.recipient}}</td>
+                <td class="fd-table__cell">{{payment.reason}}</td>
+                <td class="fd-table__cell">{{payment.quantity}}</td>
+            </tr>
+        </tbody>
+    </table>
       </div>
     </div>
   </section>

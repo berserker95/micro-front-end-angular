@@ -1,4 +1,4 @@
-# Luigi example application written in Angular
+# Micro front-end application with Angular and Luigi framework
 
 ## Overview
 

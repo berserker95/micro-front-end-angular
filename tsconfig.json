@@ -1,5 +1,5 @@
 {
-  "compileOnSave": false,
+  "compileOnSave": true,
   "compilerOptions": {
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
@@ -11,7 +11,10 @@
     "typeRoots": ["node_modules/@types"],
     "lib": ["es2017", "dom"],
     "module": "es2015",
-    "baseUrl": "./",
+    "baseUrl": "src",
+    "paths": {
+      "@model/*": ["core/model/*"]
+    },
     "allowSyntheticDefaultImports": true
   }
 }
