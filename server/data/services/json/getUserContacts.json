@@ -1,0 +1,27 @@
+{
+  "data": {
+    "contacts": [
+      {
+        "id": 1,
+        "name": "Mario Biondi",
+        "email": "mario.biondi@gmail.com",
+        "phone": "099-121-456-67",
+        "iban": "IT87P80303225909K9DT296AKDI"
+      },
+      {
+        "id": 2,
+        "name": "Luigi Verdi",
+        "email": "l.verdi@hotmail.com",
+        "phone": "313-171-234-5",
+        "iban": "AE070331234567890123456"
+      },
+      {
+        "id": 3,
+        "name": "Steve Jobs",
+        "email": "s.jobs@libero.it",
+        "phone": "202-555-0156",
+        "iban": "AT611904300234573201"
+      }
+    ]
+  }
+}

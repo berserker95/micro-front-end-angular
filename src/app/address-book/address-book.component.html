@@ -1,0 +1,65 @@
+<div>
+  <section class="fd-section">
+    <div class="fd-section__header">
+      <h1 class="fd-section__title">{{title}}</h1>
+    </div>
+    <div class="fd-panel">
+      <div class="fd-panel__body">
+        <div class="fddocs-container fddocs-button-container">
+          <button class="fd-button fd-button--emphasized" aria-pressed="false">
+            <span class="fd-button__text">Add Contact</span>
+            <i class="sap-icon--add"></i>
+          </button>
+        </div>
+        <table class="fd-table" *ngIf="contacts.length > 0">
+          <thead class="fd-table__header">
+              <tr class="fd-table__row">
+                  <th class="fd-table__cell" scope="col" *ngFor="let column of tableHeader">
+                    {{column}}
+                  </th>
+              </tr>
+          </thead>
+          <tbody class="fd-table__body">
+              <tr class="fd-table__row" *ngFor="let contact of contacts; index as i">
+                  <td class="fd-table__cell">{{contact.name}}</td>
+                  <td class="fd-table__cell">{{contact.iban}}</td>
+                  <td class="fd-table__cell">{{contact.phone}}</td>
+                  <td class="fd-table__cell">{{contact.email}}</td>
+                  <td class="fd-table__cell fd-table__cell--fit-content">
+                    <div class="fd-popover">
+                      <div class="fd-popover__control">
+                          <button aria-label="navigation" class="fd-button fd-button--transparent" [aria-controls]="i" aria-haspopup="true" aria-expanded="false" aria-label="More" (click)="onPopoverClick(i)">
+                              <i class="sap-icon--overflow"></i>
+                          </button>
+                      </div>
+                      <div class="fd-popover__body fd-popover__body--right" aria-hidden="true" [id]="i">
+                          <nav class="fd-menu">
+                              <ul class="fd-menu__list fd-menu__list--no-shadow">
+                                  <li class="fd-menu__item">
+                                      <a class="fd-menu__link" role="button" (click)="removeContact(i)">
+                                        <i class="sap-icon sap-icon--delete sap-icon--color-negative"></i>
+                                        <span class="fd-menu__title">Delete</span>
+                                      </a>
+                                  </li>
+                                  <li class="fd-menu__item">
+                                      <a href="#" class="fd-menu__link">
+                                          <span class="fd-menu__title">Option 2</span>
+                                      </a>
+                                  </li>
+                                  <li class="fd-menu__item">
+                                      <a href="#" class="fd-menu__link">
+                                          <span class="fd-menu__title">Option 3</span>
+                                      </a>
+                                  </li>
+                              </ul>
+                          </nav>
+                      </div>
+                  </div>
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+      </div>
+    </div>
+  </section>
+</div>

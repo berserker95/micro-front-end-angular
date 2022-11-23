@@ -14,10 +14,10 @@ Luigi.setConfig({
             viewUrl: '/sampleapp.html#/payment-summary'
           },
           {
-            pathSegment: 'sample2',
-            label: 'Second',
-            icon: 'paper-plane',
-            viewUrl: '/sampleapp.html#/sample2'
+            pathSegment: 'address-book',
+            label: 'Address Book',
+            icon: 'address-book',
+            viewUrl: '/sampleapp.html#/address-book'
           },
         ]
       },

@@ -21,6 +21,7 @@
     "@luigi-project/client-support-angular": "^1.20.1",
     "@luigi-project/core": "^1.22.0",
     "@sap-theming/theming-base-content": "11.1.35",
+    "fiori-fundamentals": "^1.7.10",
     "fundamental-styles": "0.23.0",
     "rxjs": "6.5.3",
     "sass": "^1.55.0",

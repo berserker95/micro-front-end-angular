@@ -5,3 +5,11 @@ export interface Payments {
   reason: string;
   quantity: string;
 }
+
+export interface Contacts {
+  id: number;
+  name: string;
+  email: string;
+  phone: string;
+  iban: string;
+}

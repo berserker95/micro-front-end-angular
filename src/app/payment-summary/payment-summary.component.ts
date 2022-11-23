@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-import { Payments } from '@model/payment-summary';
+import { Payments } from '@model/interfaces';
 import { Observable, Subscription } from 'rxjs';
 
 @Component({
@@ -13,6 +13,8 @@ export class PaymentSummaryComponent implements OnInit, OnDestroy {
 
   private subscriptions = new Subscription();
 
+  title = 'Payment Summary';
+  description = 'The list of your payments'
   tableHeader: Array<string> = ['Creation Date', 'Recipient', 'Reason', 'Quantity'];
   payments : Array<Payments> = [];
 

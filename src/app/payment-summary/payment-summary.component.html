@@ -1,11 +1,11 @@
 <div>
   <section class="fd-section">
     <div class="fd-section__header">
-      <h1 class="fd-section__title">Payment Summary</h1>
+      <h1 class="fd-section__title">{{title}}</h1>
     </div>
     <div class="fd-panel">
       <div class="fd-panel__body">
-      <p>The list of your payments</p>
+      <p>{{description}}</p>
       <table class="fd-table" *ngIf="payments.length > 0">
         <thead class="fd-table__header">
             <tr class="fd-table__row">

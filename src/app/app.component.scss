@@ -1,5 +1,6 @@
 $fd-scss-font-path: '~fiori-fundamentals/scss/fonts/';
-$fd-icons-path: '~fiori-fundamentals/scss/icons/';
+@import '/node_modules/fiori-fundamentals/scss/icons.scss';
+
 
 .fd-page__header {
   padding-left: 1.5rem;

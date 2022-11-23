@@ -1,0 +1,12 @@
+.fd-panel__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sapFontHeader3Size);
+}
+.fddocs-container{
+  display: flex;
+  justify-content: flex-end;
+}
+.fd-menu__link {
+  gap: .5rem;
+}
