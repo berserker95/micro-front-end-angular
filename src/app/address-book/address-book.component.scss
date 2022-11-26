@@ -9,4 +9,16 @@
 }
 .fd-menu__link {
   gap: .5rem;
+  li {
+    height: var(--sapFontHeader1Size);
+  }
+}
+.dialog-form {
+  &.fd-dialog:before {
+    opacity: 0.5;
+  }
+  header .fd-bar__element {
+    width: 100%;
+    justify-content: space-between;
+  }
 }

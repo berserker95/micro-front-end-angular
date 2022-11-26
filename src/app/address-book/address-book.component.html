@@ -6,7 +6,7 @@
     <div class="fd-panel">
       <div class="fd-panel__body">
         <div class="fddocs-container fddocs-button-container">
-          <button class="fd-button fd-button--emphasized" aria-pressed="false">
+          <button class="fd-button fd-button--emphasized" (click)="addContact()">
             <span class="fd-button__text">Add Contact</span>
             <i class="sap-icon--add"></i>
           </button>
@@ -36,19 +36,15 @@
                           <nav class="fd-menu">
                               <ul class="fd-menu__list fd-menu__list--no-shadow">
                                   <li class="fd-menu__item">
+                                    <a class="fd-menu__link" role="button" (click)="editContact(i)">
+                                      <i class="sap-icon sap-icon--edit sap-icon--color-information"></i>
+                                        <span class="fd-menu__title">Edit</span>
+                                    </a>
+                                  </li>
+                                  <li class="fd-menu__item">
                                       <a class="fd-menu__link" role="button" (click)="removeContact(i)">
                                         <i class="sap-icon sap-icon--delete sap-icon--color-negative"></i>
                                         <span class="fd-menu__title">Delete</span>
-                                      </a>
-                                  </li>
-                                  <li class="fd-menu__item">
-                                      <a href="#" class="fd-menu__link">
-                                          <span class="fd-menu__title">Option 2</span>
-                                      </a>
-                                  </li>
-                                  <li class="fd-menu__item">
-                                      <a href="#" class="fd-menu__link">
-                                          <span class="fd-menu__title">Option 3</span>
                                       </a>
                                   </li>
                               </ul>
@@ -63,3 +59,65 @@
     </div>
   </section>
 </div>
+<section #dialogForm class="fd-dialog-docs-static fd-dialog dialog-form">
+  <div class="fd-dialog__content fd-dialog__content--s" role="dialog" aria-modal="true" aria-labelledby="dialog-title-2">
+      <header class="fd-dialog__header fd-bar fd-bar--header">
+          <div class="fd-bar__left">
+          <div class="fd-bar__element">
+              <h2 class="fd-title fd-title--h5" id="dialog-title-223">
+             {{modalTitle}}
+              </h2>
+              <button aria-label="Close modal" class="fd-button fd-button--transparent fd-button--compact" (click)="hideModal()">
+                <i class="sap-icon--decline sap-icon--color-neutral"></i>
+              </button>
+          </div>
+          </div>
+      </header>
+      <div class="fd-dialog__body">
+           <form [formGroup]="contactForm" class="fd-form-layout-grid-container fd-form-layout-grid-container--vertical fd-form-group" (ngSubmit)="onSubmit()">
+              <div class="fd-row fd-form-item">
+                  <div class="fd-col">
+                      <label class="fd-form-label" for="input-name">Name:</label>
+                  </div>
+                  <div class="fd-col">
+                      <input class="fd-input" type="text" id="input-name" placeholder="Enter First and Last Name" formControlName="name" required>
+                  </div>
+              </div>
+              <div class="fd-row fd-form-item">
+                <div class="fd-col">
+                    <label class="fd-form-label" for="input-iban">IBAN:</label>
+                </div>
+                <div class="fd-col">
+                    <input class="fd-input" type="text" id="input-iban" placeholder="Enter IBAN" formControlName="iban" required>
+                </div>
+            </div>
+            <div class="fd-row fd-form-item">
+              <div class="fd-col">
+                  <label class="fd-form-label" for="input-phone">Phone:</label>
+              </div>
+              <div class="fd-col">
+                  <input class="fd-input" type="text" id="input-phone" placeholder="Enter Phone number" formControlName="phone" required>
+              </div>
+          </div>
+          <div class="fd-row fd-form-item">
+            <div class="fd-col">
+                <label class="fd-form-label" for="input-email">Email:</label>
+            </div>
+            <div class="fd-col">
+                <input class="fd-input" type="email" id="input-email" placeholder="Enter E-mail" formControlName="email" defaultValue="aa" required>
+            </div>
+        </div>
+          </form>
+      </div>
+    <footer class="fd-dialog__footer fd-bar fd-bar--footer">
+        <div class="fd-bar__right">
+            <div class="fd-bar__element">
+                <button class="fd-dialog__decisive-button fd-button fd-button--emphasized fd-button--compact"  [disabled]="!contactForm.valid" (click)="onSubmit()">{{confirmButtonLabel}}</button>
+            </div>
+            <div class="fd-bar__element">
+                <button class="fd-dialog__decisive-button fd-button fd-button--transparent fd-button--compact" (click)="hideModal()">Cancel</button>
+            </div>
+        </div>
+    </footer>
+  </div>
+</section>
